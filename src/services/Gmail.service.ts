@@ -1,6 +1,14 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 
+import { google } from 'googleapis';
+import { authenticate } from '@google-cloud/local-auth';
+import { OAuth2Client } from 'google-auth-library';
+
+const client = new OAuth2Client();
+
+const gmail = google.gmail('v1');
+
 const YOUR_CLIENT_ID =
   '678054942691-6qn4u4d6e6j3sivgvhhhvofe8gtbb8n3.apps.googleusercontent.com'; // FIXME: search for a way to correctly save this
 
@@ -11,10 +19,33 @@ export class GmailService {
   constructor(private readonly httpService: HttpService) {}
 
   signUp(code: string) {
-    const url = `https://oauth2.googleapis.com/token?code=${code}&client_id=${YOUR_CLIENT_ID}&client_secret=${YOUR_CLIENT_SECRET}&redirect_uri=http://localhost:3000/google&grant_type=authorization_code`;
+    const url = `https://oauth2.googleapis.com/token?code=${code}&client_id=${YOUR_CLIENT_ID}&client_secret=${YOUR_CLIENT_SECRET}&redirect_uri=http://localhost:5173/hame&grant_type=authorization_code`;
 
     this.httpService.get(url).subscribe(({ id_token }: any) => {
       console.log(id_token);
     });
+  }
+
+  async readEmails(token: any) {
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience: YOUR_CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
+    });
+
+    const { email } = ticket.getPayload();
+    console.log(email);
+
+    const auth = await authenticate({
+      keyfilePath:
+        '/home/justincast/projects/monetico-api/src/services/keys.json',
+      scopes: ['https://www.googleapis.com/auth/gmail.readonly'],
+    });
+
+    google.options({ auth });
+
+    const res = await gmail.users.messages.list({
+      userId: email,
+    });
+    console.log(res.data);
   }
 }
