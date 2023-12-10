@@ -1,7 +1,7 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 
-import { google } from 'googleapis';
+import { gmail_v1, google } from 'googleapis';
 import { authenticate } from '@google-cloud/local-auth';
 import { OAuth2Client } from 'google-auth-library';
 
@@ -43,9 +43,53 @@ export class GmailService {
 
     google.options({ auth });
 
-    const res = await gmail.users.messages.list({
-      userId: email,
+    const { data } = await gmail.users.messages.list({
+      userId: 'me', // FIXME:
+      q: `from:bncontacto@bncr.fi.cr`,
     });
-    console.log(res.data);
+    const { messages } = data;
+
+    if (messages) {
+      this.processEmails(messages);
+    }
+  }
+
+  private processEmails(messages: Array<gmail_v1.Schema$Message>) {
+    const reservedWords = ['comprobante', 'compra', 'monto'];
+    const items = [];
+
+    messages.forEach(async ({ id }) => {
+      const { data } = await gmail.users.messages.get({
+        userId: 'me',
+        id,
+      });
+      const { snippet, payload } = data;
+      const containsReservedWords = reservedWords.some((w: string) =>
+        snippet.toLowerCase().includes(w),
+      );
+
+      if (containsReservedWords) {
+        const textParts = payload.parts.filter(
+          ({ mimeType }) => mimeType === 'text/plain',
+        );
+
+        textParts.forEach(({ body }) => {
+          const parsedResult = Buffer.from(body.data, 'base64').toString(
+            'ascii',
+          );
+          const words = parsedResult;
+          const regex = /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
+          const value = words.match(regex);
+
+          const item = {
+            total: value[0],
+          };
+
+          items.push(item);
+        });
+      }
+
+      console.log(items);
+    });
   }
 }
