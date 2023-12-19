@@ -27,13 +27,10 @@ export class GmailService {
   }
 
   async readEmails(token: any) {
-    const ticket = await client.verifyIdToken({
+    await client.verifyIdToken({
       idToken: token,
       audience: YOUR_CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
     });
-
-    const { email } = ticket.getPayload();
-    console.log(email);
 
     const auth = await authenticate({
       keyfilePath:
@@ -49,47 +46,62 @@ export class GmailService {
     });
     const { messages } = data;
 
-    if (messages) {
-      this.processEmails(messages);
-    }
+    if (messages) return this.processEmails(messages);
+
+    return [];
   }
 
   private processEmails(messages: Array<gmail_v1.Schema$Message>) {
     const reservedWords = ['comprobante', 'compra', 'monto'];
     const items = [];
 
-    messages.forEach(async ({ id }) => {
-      const { data } = await gmail.users.messages.get({
-        userId: 'me',
-        id,
-      });
-      const { snippet, payload } = data;
-      const containsReservedWords = reservedWords.some((w: string) =>
-        snippet.toLowerCase().includes(w),
-      );
-
-      if (containsReservedWords) {
-        const textParts = payload.parts.filter(
-          ({ mimeType }) => mimeType === 'text/plain',
-        );
-
-        textParts.forEach(({ body }) => {
-          const parsedResult = Buffer.from(body.data, 'base64').toString(
-            'ascii',
+    return new Promise((resolve, reject) => {
+      messages.forEach(async ({ id }) => {
+        try {
+          const { data } = await gmail.users.messages.get({
+            userId: 'me',
+            id,
+          });
+          const { snippet, payload } = data;
+          const containsReservedWords = reservedWords.some((w: string) =>
+            snippet.toLowerCase().includes(w),
           );
-          const words = parsedResult;
-          const regex = /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
-          const value = words.match(regex);
 
-          const item = {
-            total: value[0],
-          };
+          if (containsReservedWords) {
+            const textParts = payload.parts.filter(
+              ({ mimeType }) => mimeType === 'text/plain',
+            );
 
-          items.push(item);
-        });
-      }
+            textParts.forEach(({ body }) => {
+              const parsedResult = Buffer.from(body.data, 'base64').toString(
+                'ascii',
+              );
+              const words = parsedResult;
+              const matchPlace = /realizada en \*([^*]+)\*/;
+              const matchDate = /el \*([^*]+)\*/;
+              const matchHour = /las \*([^*]+)\*/;
+              const matchAmount =
+                /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
+              const matchedAmount = words.match(matchAmount);
+              const matchedPlace = words.match(matchPlace);
+              const matchedDate = words.match(matchDate);
+              const matchedHour = words.match(matchHour);
 
-      console.log(items);
+              const item = {
+                total: matchedAmount[0],
+                place: matchedPlace[1],
+                date: matchedDate[1],
+                hour: matchedHour[1],
+              };
+              items.push(item);
+            });
+          }
+        } catch (e) {
+          reject(e);
+        }
+      });
+
+      resolve(items);
     });
   }
 }

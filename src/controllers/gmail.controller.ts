@@ -6,8 +6,8 @@ export class GmailController {
   constructor(private readonly gmailService: GmailService) {}
 
   @Post('login')
-  emails(@Body() { token }) {
-    this.gmailService.readEmails(token);
+  async emails(@Body() { token }) {
+    return this.gmailService.readEmails(token);
   }
 
   @Get('success')
