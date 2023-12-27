@@ -4,6 +4,8 @@ import { Injectable } from '@nestjs/common';
 import { gmail_v1, google } from 'googleapis';
 import { authenticate } from '@google-cloud/local-auth';
 import { OAuth2Client } from 'google-auth-library';
+import { GaxiosResponse } from 'gaxios';
+import { flatten, filter } from 'lodash';
 
 const client = new OAuth2Client();
 
@@ -46,62 +48,77 @@ export class GmailService {
     });
     const { messages } = data;
 
-    if (messages) return this.processEmails(messages);
+    if (messages) {
+      const processed = await this.processEmails(messages);
+
+      return processed;
+    }
 
     return [];
   }
 
-  private processEmails(messages: Array<gmail_v1.Schema$Message>) {
+  async processEmails(messages: Array<gmail_v1.Schema$Message>) {
     const reservedWords = ['comprobante', 'compra', 'monto'];
-    const items = [];
+    // const items = [];
 
-    return new Promise((resolve, reject) => {
-      messages.forEach(async ({ id }) => {
-        try {
-          const { data } = await gmail.users.messages.get({
-            userId: 'me',
-            id,
-          });
-          const { snippet, payload } = data;
-          const containsReservedWords = reservedWords.some((w: string) =>
-            snippet.toLowerCase().includes(w),
-          );
-
-          if (containsReservedWords) {
-            const textParts = payload.parts.filter(
-              ({ mimeType }) => mimeType === 'text/plain',
-            );
-
-            textParts.forEach(({ body }) => {
-              const parsedResult = Buffer.from(body.data, 'base64').toString(
-                'ascii',
-              );
-              const words = parsedResult;
-              const matchPlace = /realizada en \*([^*]+)\*/;
-              const matchDate = /el \*([^*]+)\*/;
-              const matchHour = /las \*([^*]+)\*/;
-              const matchAmount =
-                /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
-              const matchedAmount = words.match(matchAmount);
-              const matchedPlace = words.match(matchPlace);
-              const matchedDate = words.match(matchDate);
-              const matchedHour = words.match(matchHour);
-
-              const item = {
-                total: matchedAmount[0],
-                place: matchedPlace[1],
-                date: matchedDate[1],
-                hour: matchedHour[1],
-              };
-              items.push(item);
-            });
-          }
-        } catch (e) {
-          reject(e);
-        }
+    const promises = messages.map(({ id }) => {
+      return gmail.users.messages.get({
+        userId: 'me',
+        id,
       });
-
-      resolve(items);
     });
+
+    const responses = await Promise.allSettled(promises);
+
+    const result = responses.map(({ status, value }: any) => {
+      if (status === 'rejected')
+        return { status, message: 'Error trying to retrieve email data' };
+
+      const {
+        data: { snippet, payload },
+      }: GaxiosResponse<gmail_v1.Schema$Message> = value;
+
+      const containsReservedWords = reservedWords.some((w: string) =>
+        snippet.toLowerCase().includes(w),
+      );
+
+      if (containsReservedWords) {
+        const textParts = payload.parts.filter(
+          ({ mimeType }) => mimeType === 'text/plain',
+        );
+
+        return textParts.map(({ body }) => {
+          const parsedResult = Buffer.from(body.data, 'base64').toString(
+            'ascii',
+          );
+          const words = parsedResult;
+          const matchPlace = /realizada en \*([^*]+)\*/;
+          const matchDate = /el \*([^*]+)\*/;
+          const matchHour = /las \*([^*]+)\*/;
+          const matchAmount = /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
+
+          const matchedAmount = words.match(matchAmount);
+          const matchedPlace = words.match(matchPlace);
+          const matchedDate = words.match(matchDate);
+          const matchedHour = words.match(matchHour);
+
+          if (
+            [matchedAmount, matchedPlace, matchedDate, matchedHour].includes(
+              null,
+            )
+          )
+            return undefined;
+
+          return {
+            total: matchedAmount[0],
+            place: matchedPlace[1],
+            date: matchedDate[1],
+            hour: matchedHour[1],
+          };
+        });
+      }
+    });
+
+    return filter(flatten(result as any), (v) => !!v);
   }
 }

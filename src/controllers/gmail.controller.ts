@@ -7,7 +7,7 @@ export class GmailController {
 
   @Post('login')
   async emails(@Body() { token }) {
-    return this.gmailService.readEmails(token);
+    return await this.gmailService.readEmails(token);
   }
 
   @Get('success')
