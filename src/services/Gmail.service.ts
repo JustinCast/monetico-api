@@ -18,6 +18,13 @@ const YOUR_CLIENT_ID =
 
 const YOUR_CLIENT_SECRET = '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';
 const BAC = 'notificacion@notificacionesbaccr.com';
+const BN = 'bncontacto@bncr.fi.cr';
+
+type ProcessingParams = {
+  parts: gmail_v1.Schema$MessagePart[];
+  id: string;
+  bank: string;
+};
 //
 @Injectable()
 export class GmailService {
@@ -34,9 +41,18 @@ export class GmailService {
   // BN: bncontacto@bncr.fi.cr
   // BAC: notificacion@notificacionesbaccr.com
   private async getMessages(bank: string) {
-    return await gmail.users.messages.list({
-      userId: 'me', // FIXME:
-      q: `from:${bank}`,
+    return new Promise(async (resolve) => {
+      const {
+        data: { messages },
+      } = await gmail.users.messages.list({
+        userId: 'me',
+        q: `from:${bank}`,
+      });
+
+      resolve({
+        bank,
+        messages,
+      });
     });
     // const { messages } = data;
 
@@ -72,31 +88,64 @@ export class GmailService {
         if (status === 'rejected')
           return { status, message: 'Error trying to retrieve email data' };
 
-        const { data } = value;
+        const { bank, messages } = value;
 
-        return await this.processEmails(data?.messages || []);
+        return this.processEmails(bank, messages || []);
       }),
     );
   }
 
-  processHtmlContent(htmlContent: gmail_v1.Schema$MessagePart[]) {
-    htmlContent.map(({ body }) => {
+  processHtmlContent({ parts, id, bank }: ProcessingParams) {
+    return parts.map(({ body }) => {
       const parsedResult = Buffer.from(body.data, 'base64').toString('ascii');
       const dom = new JSDOM(parsedResult);
       const [, , , , table] = dom.window.document.getElementsByTagName('table');
       const rows = table.getElementsByTagName('tr');
       const [firstRow] = rows; // COMERCIO
       const lastRow = rows[rows.length - 1]; // MONTO
-      const [, secondCell] = firstRow.getElementsByTagName('td');
-      const [, secondValueCell] = lastRow.getElementsByTagName('td');
+      const [, place] = firstRow.getElementsByTagName('td');
+      const [, amount] = lastRow.getElementsByTagName('td');
 
-      // debugger;
-      console.log(secondCell.textContent);
-      console.log(secondValueCell.textContent);
+      return {
+        id,
+        bank,
+        total: String(amount.textContent).replaceAll('\n', ''),
+        place: String(place.textContent).replaceAll('\n', ''),
+      };
     });
   }
 
-  async processEmails(messages: Array<gmail_v1.Schema$Message>) {
+  processPlainContent({ parts, id, bank }: ProcessingParams) {
+    return parts.map(({ body }) => {
+      const parsedResult = Buffer.from(body.data, 'base64').toString('ascii');
+      const words = parsedResult;
+      const matchPlace = /realizada en \*([^*]+)\*/;
+      const matchDate = /el \*([^*]+)\*/;
+      const matchHour = /las \*([^*]+)\*/;
+      const matchAmount = /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
+
+      const matchedAmount = words.match(matchAmount);
+      const matchedPlace = words.match(matchPlace);
+      const matchedDate = words.match(matchDate);
+      const matchedHour = words.match(matchHour);
+
+      if (
+        [matchedAmount, matchedPlace, matchedDate, matchedHour].includes(null)
+      )
+        return undefined;
+
+      return {
+        id,
+        bank,
+        total: matchedAmount[0],
+        place: matchedPlace[1],
+        date: matchedDate[1],
+        hour: matchedHour[1],
+      };
+    });
+  }
+
+  async processEmails(bank: string, messages: Array<gmail_v1.Schema$Message>) {
     const reservedWords = ['comprobante', 'compra', 'monto'];
     // const items = [];
 
@@ -125,45 +174,15 @@ export class GmailService {
         ({ mimeType }) => mimeType === 'text/html',
       );
 
-      if (htmlContent) {
-        this.processHtmlContent(htmlContent);
-      }
+      if (htmlContent && bank === BAC)
+        return this.processHtmlContent({ parts: htmlContent, id, bank });
 
-      if (containsReservedWords) {
+      if (containsReservedWords && bank === BN) {
         const textParts = payload.parts.filter(
           ({ mimeType }) => mimeType === 'text/plain',
         );
 
-        // return textParts.map(({ body }) => {
-        //   const parsedResult = Buffer.from(body.data, 'base64').toString(
-        //     'ascii',
-        //   );
-        //   const words = parsedResult;
-        //   const matchPlace = /realizada en \*([^*]+)\*/;
-        //   const matchDate = /el \*([^*]+)\*/;
-        //   const matchHour = /las \*([^*]+)\*/;
-        //   const matchAmount = /(?:CRC|USD) (\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)/;
-
-        //   const matchedAmount = words.match(matchAmount);
-        //   const matchedPlace = words.match(matchPlace);
-        //   const matchedDate = words.match(matchDate);
-        //   const matchedHour = words.match(matchHour);
-
-        //   if (
-        //     [matchedAmount, matchedPlace, matchedDate, matchedHour].includes(
-        //       null,
-        //     )
-        //   )
-        //     return undefined;
-
-        //   return {
-        //     id,
-        //     total: matchedAmount[0],
-        //     place: matchedPlace[1],
-        //     date: matchedDate[1],
-        //     hour: matchedHour[1],
-        //   };
-        // });
+        return this.processPlainContent({ parts: textParts, id, bank });
       }
     });
 
