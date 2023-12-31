@@ -102,15 +102,24 @@ export class GmailService {
       const [, , , , table] = dom.window.document.getElementsByTagName('table');
       const rows = table.getElementsByTagName('tr');
       const [firstRow] = rows; // COMERCIO
+      const [, , dateRow] = rows; // HORA Y FECHA
       const lastRow = rows[rows.length - 1]; // MONTO
+
       const [, place] = firstRow.getElementsByTagName('td');
+      const [, dateRaw] = dateRow.getElementsByTagName('td');
       const [, amount] = lastRow.getElementsByTagName('td');
+
+      const [day, year, time] = dateRaw.textContent.split(',');
+      const date = `${day}, ${year}`;
+      const hour = time;
 
       return {
         id,
         bank,
         total: String(amount.textContent).replaceAll('\n', ''),
         place: String(place.textContent).replaceAll('\n', ''),
+        date: String(date).replaceAll('\n', ''),
+        hour: String(hour).replaceAll('\n', ''),
       };
     });
   }
