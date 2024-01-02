@@ -110,16 +110,22 @@ export class GmailService {
       const [, amount] = lastRow.getElementsByTagName('td');
 
       const [day, year, time] = dateRaw.textContent.split(',');
-      const date = `${day}, ${year}`;
-      const hour = time;
+      let date = `${day}, ${year}`;
+      let hour = time;
+
+      // processing
+      date = String(date).replaceAll('\n', '');
+      date = date.replace(/\s+/g, ' ').trim();
+      hour = String(hour).replaceAll('\n', '');
+      hour = hour.replace(/\s+/g, ' ').trim();
 
       return {
         id,
         bank,
         total: String(amount.textContent).replaceAll('\n', ''),
         place: String(place.textContent).replaceAll('\n', ''),
-        date: String(date).replaceAll('\n', ''),
-        hour: String(hour).replaceAll('\n', ''),
+        date,
+        hour,
       };
     });
   }
