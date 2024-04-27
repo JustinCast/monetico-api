@@ -1,0 +1,972 @@
+{
+  "data": [
+    {
+      "id": "18cc1cbc98d4eb32",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 8,590.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Dic 31, 2023",
+      "hour": "15:33"
+    },
+    {
+      "id": "18cb6c74db38bb7d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,530.00",
+      "place": "MAXIPALI CIUDAD QUE",
+      "date": "Dic 29, 2023",
+      "hour": "12:12"
+    },
+    {
+      "id": "18cb6c6962136488",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 180,600.00",
+      "place": "MAXIPALI CIUDAD QUE",
+      "date": "Dic 29, 2023",
+      "hour": "12:11"
+    },
+    {
+      "id": "18cb20ad4c9fcf69",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 76,751.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Dic 28, 2023",
+      "hour": "14:08"
+    },
+    {
+      "id": "18c4bd118e759ded",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 8,738.00",
+      "place": "WALMART CIUDAD QUESAD",
+      "date": "Dic 8, 2023",
+      "hour": "17:43"
+    },
+    {
+      "id": "18c41ea8d3cc05e5",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "USD 1,991.80",
+      "place": "CC  ICON ALAJUELA TO L",
+      "date": "Dic 6, 2023",
+      "hour": "19:35"
+    },
+    {
+      "id": "18c2c16e72138736",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 26,950.00",
+      "place": "BELLAS EL ENCUENTRO",
+      "date": "Dic 2, 2023",
+      "hour": "13:52"
+    },
+    {
+      "id": "18c21d5e19e1334d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,500.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Nov 30, 2023",
+      "hour": "14:05"
+    },
+    {
+      "id": "18c1e6f334f070cb",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 249,077.00",
+      "place": "WALMART EN LINEA OCN00",
+      "date": "Nov 29, 2023",
+      "hour": "22:14"
+    },
+    {
+      "id": "18c0d61a3c6d3c51",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 17,500.00",
+      "place": "LA ESQUINA VERDE",
+      "date": "Nov 26, 2023",
+      "hour": "14:45"
+    },
+    {
+      "id": "18c0d4645a244524",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 31,187.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Nov 26, 2023",
+      "hour": "14:15"
+    },
+    {
+      "id": "18bb770958698d40",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "USD 60.00",
+      "place": "VERCEL PRO",
+      "date": "Nov 9, 2023",
+      "hour": "22:14"
+    },
+    {
+      "id": "18ba255b0cebd5b1",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 46,954.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Nov 5, 2023",
+      "hour": "19:53"
+    },
+    {
+      "id": "18ba2351c9d4a959",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,200.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Nov 5, 2023",
+      "hour": "19:17"
+    },
+    {
+      "id": "18b9b997c1bc7282",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,730.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Nov 4, 2023",
+      "hour": "12:29"
+    },
+    {
+      "id": "18b88259480f5999",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,500.00",
+      "place": "GASOLINERA SANTA CL",
+      "date": "Oct 31, 2023",
+      "hour": "17:50"
+    },
+    {
+      "id": "18b838165ea2a0e7",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 103,258.00",
+      "place": "WALMART CIUDAD QUESAD",
+      "date": "Oct 30, 2023",
+      "hour": "20:12"
+    },
+    {
+      "id": "18b834e387b31f00",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 8,355.00",
+      "place": "TACO BELL SAN CARLO",
+      "date": "Oct 30, 2023",
+      "hour": "19:16"
+    },
+    {
+      "id": "18b8334c68d98590",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 28,500.00",
+      "place": "VITALIKE EL ENCUENT",
+      "date": "Oct 30, 2023",
+      "hour": "18:49"
+    },
+    {
+      "id": "18b83254fe587889",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 24,900.00",
+      "place": "VAN HEUSEN PASEO DE",
+      "date": "Oct 30, 2023",
+      "hour": "18:32"
+    },
+    {
+      "id": "18b82e9574a45754",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 13,700.00",
+      "place": "FRUTAS Y VERDURAS L",
+      "date": "Oct 30, 2023",
+      "hour": "17:26"
+    },
+    {
+      "id": "18b544d94167ec42",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 400.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Oct 21, 2023",
+      "hour": "16:14"
+    },
+    {
+      "id": "18b53f594a4d45d6",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 4,260.00",
+      "place": "LA ESQUINA VERDE",
+      "date": "Oct 21, 2023",
+      "hour": "14:37"
+    },
+    {
+      "id": "18b53e991749cc2e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 32,104.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Oct 21, 2023",
+      "hour": "14:24"
+    },
+    {
+      "id": "18b178cedc269e1b",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "USD 20.00",
+      "place": "VERCEL PRO",
+      "date": "Oct 9, 2023",
+      "hour": "21:06"
+    },
+    {
+      "id": "18b178cecddbb0f7",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "USD .50",
+      "place": "VERCEL INC.",
+      "date": "Oct 9, 2023",
+      "hour": "21:06"
+    },
+    {
+      "id": "18b178ccc5d8ca6f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "USD .00",
+      "place": "VERCEL INC.",
+      "date": "Oct 9, 2023",
+      "hour": "21:06"
+    },
+    {
+      "id": "18b111fdb9ab43ae",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 196,279.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Oct 8, 2023",
+      "hour": "15:09"
+    },
+    {
+      "id": "18b0bc886e714b92",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 9,500.00",
+      "place": "LA ESQUINA VERDE",
+      "date": "Oct 7, 2023",
+      "hour": "14:16"
+    },
+    {
+      "id": "18b0bae0f2c95885",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 11,605.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Oct 7, 2023",
+      "hour": "13:47"
+    },
+    {
+      "id": "18aed00bc7746a6c",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 10,615.00",
+      "place": "LA ESQUINA VERDE",
+      "date": "Oct 1, 2023",
+      "hour": "14:49"
+    },
+    {
+      "id": "18aeceae1606eb03",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 51,358.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Oct 1, 2023",
+      "hour": "14:25"
+    },
+    {
+      "id": "18ae31d63b8bd195",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,300.00",
+      "place": "ACUAVET",
+      "date": "Sep 29, 2023",
+      "hour": "16:44"
+    },
+    {
+      "id": "18a99b23317e0442",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,320.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Sep 15, 2023",
+      "hour": "10:34"
+    },
+    {
+      "id": "18a99af8ff09e92d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 34,559.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Sep 15, 2023",
+      "hour": "10:32"
+    },
+    {
+      "id": "18a77906e9a11afc",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,140.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Sep 8, 2023",
+      "hour": "19:31"
+    },
+    {
+      "id": "18a779047d46dd33",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 36,366.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Sep 8, 2023",
+      "hour": "19:30"
+    },
+    {
+      "id": "18a6d1832c4e2cda",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 48,330.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Sep 6, 2023",
+      "hour": "18:17"
+    },
+    {
+      "id": "18a4e3baeb67469d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "GASOLINERA SANTA CL",
+      "date": "Ago 31, 2023",
+      "hour": "18:54"
+    },
+    {
+      "id": "18a4e364d1447d9a",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 42,372.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Ago 31, 2023",
+      "hour": "18:48"
+    },
+    {
+      "id": "18a3ebba2ac09664",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 5,650.00",
+      "place": "ALM EL REY 15 SAN C",
+      "date": "Ago 28, 2023",
+      "hour": "18:39"
+    },
+    {
+      "id": "18a397c8a51227fb",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 5,900.00",
+      "place": "SUPER CERRO CORTEZ",
+      "date": "Ago 27, 2023",
+      "hour": "18:12"
+    },
+    {
+      "id": "18a2f3f6e882180f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 18,714.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Ago 25, 2023",
+      "hour": "18:29"
+    },
+    {
+      "id": "18a1a62a365fbe2a",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,885.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Ago 21, 2023",
+      "hour": "17:16"
+    },
+    {
+      "id": "18a1a6224e2a073d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,885.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Ago 21, 2023",
+      "hour": "17:15"
+    },
+    {
+      "id": "18a104d111aba80c",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "ESTACION DE SERVICI",
+      "date": "Ago 19, 2023",
+      "hour": "18:16"
+    },
+    {
+      "id": "18a08e7261b4d58a",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 950.00",
+      "place": "COMERCIAL FLOSANCO DE",
+      "date": "Ago 18, 2023",
+      "hour": "07:47"
+    },
+    {
+      "id": "18a08e5c584ede5d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,085.00",
+      "place": "COMERCIAL FLOSANCO DE",
+      "date": "Ago 18, 2023",
+      "hour": "07:46"
+    },
+    {
+      "id": "18a005ea5f3b9f14",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 19,260.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Ago 16, 2023",
+      "hour": "16:01"
+    },
+    {
+      "id": "18a003c75c74624f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 60,000.00",
+      "place": "OFICINA CIUDAD QUESADA",
+      "date": "Ago 16, 2023",
+      "hour": "15:24"
+    },
+    {
+      "id": "189f5f6a9036c89d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,000.00",
+      "place": "GASOLINERA SANTA CL",
+      "date": "Ago 14, 2023",
+      "hour": "15:32"
+    },
+    {
+      "id": "189f5f0d86688f9d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,950.00",
+      "place": "COMERCIAL FLOSANCO",
+      "date": "Ago 14, 2023",
+      "hour": "15:25"
+    },
+    {
+      "id": "189e79e9c620d2a2",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,740.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Ago 11, 2023",
+      "hour": "20:41"
+    },
+    {
+      "id": "189e1e6dcd1864d2",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,500.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Ago 10, 2023",
+      "hour": "18:02"
+    },
+    {
+      "id": "189e1c40ea089527",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 16,687.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Ago 10, 2023",
+      "hour": "17:24"
+    },
+    {
+      "id": "189dade4ac49f4b3",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 525.00",
+      "place": "DIGA CENTRO",
+      "date": "Ago 9, 2023",
+      "hour": "09:15"
+    },
+    {
+      "id": "189c827d3632daca",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,210.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Ago 5, 2023",
+      "hour": "18:03"
+    },
+    {
+      "id": "189c812e5970995f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 5,500.00",
+      "place": "LALALAND CAFE",
+      "date": "Ago 5, 2023",
+      "hour": "17:40"
+    },
+    {
+      "id": "189c7db250523598",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "ESTACION DE SERVICI",
+      "date": "Ago 5, 2023",
+      "hour": "16:39"
+    },
+    {
+      "id": "189b3f2365bf903e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 261,393.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Ago 1, 2023",
+      "hour": "19:52"
+    },
+    {
+      "id": "189adc4617b6b55a",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 10,840.00",
+      "place": "PALI ST.CLARA S.CAR",
+      "date": "Jul 31, 2023",
+      "hour": "15:04"
+    },
+    {
+      "id": "189a43312e211685",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,800.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Jul 29, 2023",
+      "hour": "18:29"
+    },
+    {
+      "id": "189a278e347801bd",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 11,897.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 29, 2023",
+      "hour": "10:26"
+    },
+    {
+      "id": "1899d99de2c7f1c0",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 3,910.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Jul 28, 2023",
+      "hour": "11:44"
+    },
+    {
+      "id": "18997afc8ace8e8d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,291.60",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jul 27, 2023",
+      "hour": "08:10"
+    },
+    {
+      "id": "1898f99295ef25ee",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,300.00",
+      "place": "SUPERMERCADO COMPRE BI",
+      "date": "Jul 25, 2023",
+      "hour": "18:28"
+    },
+    {
+      "id": "18989fdb79157b38",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,570.00",
+      "place": "WALMART CIUDAD QUESADA",
+      "date": "Jul 24, 2023",
+      "hour": "16:20"
+    },
+    {
+      "id": "18989ec072c1ea61",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 3,889.84",
+      "place": "MAYCA AUTOSERVICIO CIU",
+      "date": "Jul 24, 2023",
+      "hour": "16:01"
+    },
+    {
+      "id": "18984ce54515f6f9",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "ESTACION DE SERVICIO L",
+      "date": "Jul 23, 2023",
+      "hour": "16:10"
+    },
+    {
+      "id": "18975b3f8e509807",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 41,513.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 20, 2023",
+      "hour": "17:47"
+    },
+    {
+      "id": "18974942d815dc47",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 4,039.19",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jul 20, 2023",
+      "hour": "12:33"
+    },
+    {
+      "id": "1897043c4db39282",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,800.00",
+      "place": "PARQUEOS ESCAZU VILLAG",
+      "date": "Jul 19, 2023",
+      "hour": "16:27"
+    },
+    {
+      "id": "1896bf5b23bce75b",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,800.00",
+      "place": "AUTO PARKING",
+      "date": "Jul 18, 2023",
+      "hour": "20:23"
+    },
+    {
+      "id": "1896b8937b52e07d",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,990.00",
+      "place": "TERIYAKI MULTIPLAZA",
+      "date": "Jul 18, 2023",
+      "hour": "18:24"
+    },
+    {
+      "id": "1896b809c4dfec5b",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 13,200.00",
+      "place": "BATH  BODY WORKS",
+      "date": "Jul 18, 2023",
+      "hour": "18:15"
+    },
+    {
+      "id": "1896b7511c87257e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 24,900.00",
+      "place": "VICTORIA S SECRET B",
+      "date": "Jul 18, 2023",
+      "hour": "18:02"
+    },
+    {
+      "id": "189665b33da40c2e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "ESTACION DE SERVICIO L",
+      "date": "Jul 17, 2023",
+      "hour": "18:16"
+    },
+    {
+      "id": "1895b6f145ac721e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,315.00",
+      "place": "SUPERMERCADO COMPRE BI",
+      "date": "Jul 15, 2023",
+      "hour": "15:22"
+    },
+    {
+      "id": "18957f5d470d8b0e",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 9,470.00",
+      "place": "REST EL COTORREO",
+      "date": "Jul 14, 2023",
+      "hour": "23:11"
+    },
+    {
+      "id": "1895772eb36f45b4",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,000.00",
+      "place": "ESTACION DE SERVICIO L",
+      "date": "Jul 14, 2023",
+      "hour": "20:48"
+    },
+    {
+      "id": "189576826d41100c",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,560.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 14, 2023",
+      "hour": "20:36"
+    },
+    {
+      "id": "1894cab81d3a7632",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,579.99",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jul 12, 2023",
+      "hour": "18:34"
+    },
+    {
+      "id": "1894b7b9fc921064",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 9,470.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 12, 2023",
+      "hour": "13:02"
+    },
+    {
+      "id": "189456408824b3c0",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 32,918.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 11, 2023",
+      "hour": "08:38"
+    },
+    {
+      "id": "18941599b5f30f61",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,790.00",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jul 10, 2023",
+      "hour": "13:48"
+    },
+    {
+      "id": "1893d53d49814705",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7.00",
+      "place": "PARQUEO CATEDRAL",
+      "date": "Jul 9, 2023",
+      "hour": "19:03"
+    },
+    {
+      "id": "1893c7bc6817cc91",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 1,330.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Jul 9, 2023",
+      "hour": "15:07"
+    },
+    {
+      "id": "1893667344dd164f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,000.00",
+      "place": "ACUAVET",
+      "date": "Jul 8, 2023",
+      "hour": "10:47"
+    },
+    {
+      "id": "189365a7515e62a4",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 20,000.00",
+      "place": "ESTACION DE SERVICIO L",
+      "date": "Jul 8, 2023",
+      "hour": "10:33"
+    },
+    {
+      "id": "189339c91910d738",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 14,000.00",
+      "place": "PIZZA RANCH CIUDAD",
+      "date": "Jul 7, 2023",
+      "hour": "21:47"
+    },
+    {
+      "id": "18930c94771c0f82",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 10,895.00",
+      "place": "CARNIC PETITE COOCIQUE",
+      "date": "Jul 7, 2023",
+      "hour": "08:37"
+    },
+    {
+      "id": "18930bacb17ade71",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,525.00",
+      "place": "SUPERMERCADO COMPRE",
+      "date": "Jul 7, 2023",
+      "hour": "08:21"
+    },
+    {
+      "id": "18926fdf74fb825b",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 13,653.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 5, 2023",
+      "hour": "10:58"
+    },
+    {
+      "id": "1892210693e15674",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 3,200.00",
+      "place": "POLLOS TEDDY S",
+      "date": "Jul 4, 2023",
+      "hour": "12:00"
+    },
+    {
+      "id": "1891882b7f495318",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 3,490.00",
+      "place": "WALMART CIUDAD QUES",
+      "date": "Jul 2, 2023",
+      "hour": "15:29"
+    },
+    {
+      "id": "189123d275c9dede",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 15,000.00",
+      "place": "ESTACION DE SERVICI",
+      "date": "Jul 1, 2023",
+      "hour": "10:15"
+    },
+    {
+      "id": "189122f26897b37f",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 6,877.86",
+      "place": "FARMACIA LIZANO CIU",
+      "date": "Jul 1, 2023",
+      "hour": "10:00"
+    },
+    {
+      "id": "1891224e18e41235",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 4,839.99",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jul 1, 2023",
+      "hour": "09:49"
+    },
+    {
+      "id": "18911fbcaca05772",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 7,500.00",
+      "place": "LA CARRETICA",
+      "date": "Jul 1, 2023",
+      "hour": "09:04"
+    },
+    {
+      "id": "1890e0b6dc3c2709",
+      "bank": "notificacion@notificacionesbaccr.com",
+      "total": "CRC 2,990.00",
+      "place": "MAYCA AUTOSERVICIO",
+      "date": "Jun 30, 2023",
+      "hour": "14:42"
+    },
+    {
+      "id": "18cbd8bd948816b5",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "USD 5.95",
+      "place": "AUDIBLE                AMZN.COM BILL USA",
+      "date": "30 de Diciembre de 2023",
+      "hour": "01:12 p.m"
+    },
+    {
+      "id": "18cabea64ac6e48b",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 679.83",
+      "place": "Spotify P284028DD5     Stockholm",
+      "date": "27 de Diciembre de 2023",
+      "hour": "07:15 a.m"
+    },
+    {
+      "id": "18cabe1888089bec",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 226.61",
+      "place": "Google Dashlane        650-2530000",
+      "date": "27 de Diciembre de 2023",
+      "hour": "07:00 a.m"
+    },
+    {
+      "id": "18ca3dcd4bf52e5f",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 5,264.73",
+      "place": "SPOTIFY P284028DD5       STOCKHOLM    SE",
+      "date": "25 de Diciembre de 2023",
+      "hour": "08:01 p.m"
+    },
+    {
+      "id": "18c9d9745d742685",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 2,100.00",
+      "place": "SUPER ECONOMICO        ALAJUELA      CRI",
+      "date": "24 de Diciembre de 2023",
+      "hour": "02:49"
+    },
+    {
+      "id": "18c9d8bd1109f193",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 8,360.00",
+      "place": "SUPER ECONOMICO        ALAJUELA      CRI",
+      "date": "24 de Diciembre de 2023",
+      "hour": "02:36"
+    },
+    {
+      "id": "18c9d42ed360c976",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 1,695.00",
+      "place": "GOOGLE DASHLANE          650-2530000  US",
+      "date": "24 de Diciembre de 2023",
+      "hour": "12:29 a.m"
+    },
+    {
+      "id": "18c984a787bad244",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 39,130.00",
+      "place": "SUPERMERCADO COMPRE BI ALAJUELA      CRI",
+      "date": "23 de Diciembre de 2023",
+      "hour": "02:07"
+    },
+    {
+      "id": "18c98226763afd3f",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 4,900.00",
+      "place": "SUPERMERCADO COMPRE BI ALAJUELA      CRI",
+      "date": "23 de Diciembre de 2023",
+      "hour": "01:23"
+    },
+    {
+      "id": "18c93f54d72d2780",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 14,050.00",
+      "place": "SUPERMERCADO COMPRE BI ALAJUELA      CRI",
+      "date": "22 de Diciembre de 2023",
+      "hour": "05:55"
+    },
+    {
+      "id": "18c83933d41b9e24",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 8,250.00",
+      "place": "FARMACIA  DEL NORTE    ALAJUELA      CRI",
+      "date": "19 de Diciembre de 2023",
+      "hour": "01:34"
+    },
+    {
+      "id": "18c74cf04398659b",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 5,975.00",
+      "place": "SUPER CERRO CORTEZ     ALAJUELA      CRI",
+      "date": "16 de Diciembre de 2023",
+      "hour": "04:45"
+    },
+    {
+      "id": "18c5ad764a84cb39",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 16,275.00",
+      "place": "TIENDA RAM.N GOMEZ     ALAJUELA      CRI",
+      "date": "11 de Diciembre de 2023",
+      "hour": "03:44"
+    },
+    {
+      "id": "18c5abf92d94d28e",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 105,500.00",
+      "place": "ASEMBIS SAN CARLOS     ALAJUELA      CRI",
+      "date": "11 de Diciembre de 2023",
+      "hour": "03:18"
+    },
+    {
+      "id": "18c5abe34091b836",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 152,500.00",
+      "place": "ASEMBIS SAN CARLOS     ALAJUELA      CRI",
+      "date": "11 de Diciembre de 2023",
+      "hour": "03:17"
+    },
+    {
+      "id": "18c5a865485b40a2",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 9,100.00",
+      "place": "SODA Y RESTAURANTE LOR ALAJUELA      CRI",
+      "date": "11 de Diciembre de 2023",
+      "hour": "02:16"
+    },
+    {
+      "id": "18c555af37b5ba45",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 1,040.00",
+      "place": "COMERCIAL FLOSANCO STA ALAJUELA      CRI",
+      "date": "10 de Diciembre de 2023",
+      "hour": "02:10"
+    },
+    {
+      "id": "18c555a82b6acb83",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 2,000.00",
+      "place": "COMERCIAL FLOSANCO DE  ALAJUELA      CRI",
+      "date": "10 de Diciembre de 2023",
+      "hour": "02:10"
+    },
+    {
+      "id": "18c45faa1fefcb19",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 6,755.00",
+      "place": "COMERCIAL FLOSANCO STA ALAJUELA      CRI",
+      "date": "07 de Diciembre de 2023",
+      "hour": "02:31"
+    },
+    {
+      "id": "18c4200876ea221c",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 600.00",
+      "place": "DICA DESAROLLOS        ALAJUELA      CRI",
+      "date": "06 de Diciembre de 2023",
+      "hour": "07:59"
+    },
+    {
+      "id": "18c408d51c10803c",
+      "bank": "bncontacto@bncr.fi.cr",
+      "total": "CRC 6,240.00",
+      "place": "TERIYAKI MULTIPLAZA ES SAN JOSE      CRI",
+      "date": "06 de Diciembre de 2023",
+      "hour": "01:13"
+    }
+  ]
+}
