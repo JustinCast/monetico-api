@@ -1,5 +1,6 @@
 import { Query, Resolver } from '@nestjs/graphql';
 import { ReportService } from 'src/services/Report.service';
+import { Report } from '../models/report.model';
 
 @Resolver(() => Report)
 export class ReportResolver {

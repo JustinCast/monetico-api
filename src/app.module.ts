@@ -5,6 +5,8 @@ import { GmailController } from './controllers/gmail.controller';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
+import { ReportService } from './services/Report.service';
+import { ReportResolver } from './resolvers/report.resolver';
 
 @Module({
   imports: [
@@ -16,6 +18,6 @@ import { join } from 'path';
     }),
   ],
   controllers: [GmailController],
-  providers: [GmailService],
+  providers: [GmailService, ReportService, ReportResolver],
 })
 export class AppModule {}

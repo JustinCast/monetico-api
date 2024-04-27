@@ -1,0 +1,17 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  reports: [Report!]!
+}
+
+type Report {
+  bank: String!
+  bankName: String!
+  date: String!
+  hour: String!
+  id: String!
+  place: String!
+  total: String!
+}

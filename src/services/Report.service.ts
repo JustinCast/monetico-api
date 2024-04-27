@@ -4,6 +4,6 @@ import * as MOCKED_RESPONSE from '../data/txs.json'; // or use const inside the 
 @Injectable()
 export class ReportService {
   getReports() {
-    return MOCKED_RESPONSE;
+    return MOCKED_RESPONSE.data;
   }
 }
