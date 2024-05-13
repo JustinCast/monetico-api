@@ -1,4 +1,6 @@
 import { Field, ObjectType } from '@nestjs/graphql';
+import { JoinColumn, ManyToOne } from 'typeorm';
+import { User } from '@/models';
 
 @ObjectType()
 export class Report {
@@ -22,4 +24,9 @@ export class Report {
 
   @Field(() => String)
   total: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn()
+  @Field(() => User)
+  user: User;
 }

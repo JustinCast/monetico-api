@@ -1,14 +1,15 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
-import { GmailService } from './services/Gmail.service';
-import { GmailController } from './controllers/gmail.controller';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
-import { ReportService } from './services/Report.service';
-import { ReportResolver } from './resolvers/report.resolver';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+
+import { GmailController } from './controllers/gmail.controller';
+import { ReportResolver } from './resolvers/report.resolver';
+import { Report, User } from '@/models';
+import { ReportService, GmailService } from '@/services';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { ConfigModule } from '@nestjs/config';
       username: 'postgres',
       password: process.env.DB_PASSWORD,
       database: 'monetico',
-      entities: [],
+      entities: [User, Report],
       synchronize: true,
     }),
   ],
