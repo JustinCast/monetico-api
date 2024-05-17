@@ -6,6 +6,7 @@ type Query {
   reports: [Report!]!
 }
 
+"""Report model"""
 type Report {
   bank: String!
   bankName: String!
@@ -14,4 +15,9 @@ type Report {
   id: String!
   place: String!
   total: String!
+  user: User!
+}
+
+type User {
+  email: String!
 }

@@ -1,8 +1,9 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { OneToMany, PrimaryColumn } from 'typeorm';
+import { Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import { Report } from '@/models';
 
 @ObjectType()
+@Entity()
 export class User {
   @PrimaryColumn()
   @Field(() => String)
