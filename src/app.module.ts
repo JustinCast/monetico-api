@@ -31,7 +31,6 @@ import { ReportService, GmailService } from '@/services';
       database: process.env.DB_NAME,
       entities: [User, Report],
       synchronize: true,
-      autoLoadEntities: true,
     }),
   ],
   controllers: [GmailController],
